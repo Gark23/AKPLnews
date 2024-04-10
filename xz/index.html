@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание занятий</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Расписание занятий</h1>
+
+        <!-- Кнопки для выбора класса -->
+        <div class="class-buttons">
+            <button onclick="loadSchedule('8')">8 класс</button>
+            <button onclick="loadSchedule('9')">9 класс</button>
+            <button onclick="loadSchedule('10')">10 инж-мат класс</button>
+            <button onclick="loadSchedule('11')">11 инж-мат класс</button>
+        </div>
+
+        <div id="scheduleWrapper" class="schedule-wrapper">
+            <!-- Расписание будет добавлено сюда динамически -->
+        </div>
+    </div>
+
+    <script src="schedule.js"></script>
+</body>
+
+</html>

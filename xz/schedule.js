@@ -1,4 +1,3 @@
-// Объекты с расписанием для каждого класса
 const schedules = {
     '8': {
         'Понедельник': ['музыка  17', 'геом(Фил) 34', 'химия  25', 'а(Т)   15', 'рус(П)  45'],
@@ -31,23 +30,22 @@ const schedules = {
     }
 };
 
-// Функция для загрузки и отображения расписания по выбранному классу
+
 function loadSchedule(className) {
     const scheduleWrapper = document.getElementById('scheduleWrapper');
-    scheduleWrapper.innerHTML = ''; // Очищаем содержимое контейнера расписания
+    scheduleWrapper.innerHTML = '';
 
     const scheduleData = schedules[className];
 
-    // Создаем таблицу расписания
+
     const table = document.createElement('table');
     const daysOfWeek = Object.keys(scheduleData);
 
-    // Создаем заголовок таблицы (шапку)
     const headerRow = document.createElement('tr');
     headerRow.innerHTML = '<th>День недели</th><th>1-й урок</th><th>2-й урок</th><th>3-й урок</th><th>4-й урок</th><th>5-й урок</th>';
     table.appendChild(headerRow);
 
-    // Заполняем таблицу данными расписания
+
     daysOfWeek.forEach(day => {
         const row = document.createElement('tr');
         row.innerHTML = `<td>${day}</td>`;
@@ -57,6 +55,6 @@ function loadSchedule(className) {
         table.appendChild(row);
     });
 
-    // Добавляем таблицу расписания на страницу
+
     scheduleWrapper.appendChild(table);
 }
